@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,900;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./countdown-bg.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+main{
+    width: 100%;
+    background-color: white;
+    padding: 3rem;
+    box-shadow: 0 .5rem 5rem #86aef84c;
+    border-radius: 2.5vmin;
+}
+
+.countdown-title {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    font-size: 4vmin;
+    color: #86ADF8;
+}
+
+.countdown{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    gap: 2vmin;
+}
+
+.countdown-value{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 16vmin;
+    color: black;
+}
+
+.countdown-label{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    font-size: 4vmin;
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    main{
+        padding: 2rem 1rem;
+    }
+}
