@@ -20,7 +20,7 @@ function countdown(untilDate) {
 }
 
 window.addEventListener('load', () => {
-    const untilDate = new Date('2022-06-23');
+    const untilDate = new Date('2022-06-23 16:00:00 GMT+8');
     const [weeksEl, daysEl, hoursEl, minutesEl, secondsEl] = Array.from(document.querySelectorAll('.countdown-value'));
     setInterval(()=>{
         const {weeks, days, hours, minutes, seconds} = countdown(untilDate);
