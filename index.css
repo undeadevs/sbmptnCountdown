@@ -52,6 +52,24 @@ main{
     color: black;
 }
 
+.end-title{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    font-size: 4vmin;
+    color: #86ADF8;
+}
+
+.end-label{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    font-size: 3.25vmin;
+    color: black;
+}
+
+.end-link{
+    color: blue;
+}
+
 @media screen and (max-width:768px) {
     main{
         padding: 2rem 1rem;

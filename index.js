@@ -19,10 +19,22 @@ function countdown(untilDate) {
     }
 }
 
+function onEnd(){
+    const mainEl = document.querySelector('main');
+    const endTemplateEl = document.getElementById('end-template');
+    mainEl.innerHTML='';
+    mainEl.appendChild(endTemplateEl.content.cloneNode(true));
+}
+
 window.addEventListener('load', () => {
     const untilDate = new Date('2022-06-23 16:00:00 GMT+8');
     const [weeksEl, daysEl, hoursEl, minutesEl, secondsEl] = Array.from(document.querySelectorAll('.countdown-value'));
-    setInterval(()=>{
+    const countdownInterval = setInterval(()=>{
+        if(Date.now()>untilDate.getTime()) {
+            clearInterval(countdownInterval);
+            onEnd();
+            return;
+        }
         const {weeks, days, hours, minutes, seconds} = countdown(untilDate);
         weeksEl.textContent = Math.floor(weeks);
         daysEl.textContent = Math.floor(days);
@@ -30,4 +42,4 @@ window.addEventListener('load', () => {
         minutesEl.textContent = Math.floor(minutes);
         secondsEl.textContent = Math.floor(seconds);
     }, 500)
-})
+});
